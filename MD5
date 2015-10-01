@@ -1,4 +1,4 @@
-a443a8064501b75066fcc9c57c309ce5 *DESCRIPTION
+ab58dedcee76506f0ed184013b9e06fa *DESCRIPTION
 a5f4f14fdfadcb6db177fd9a025cf51d *NAMESPACE
 52d8b51037d1a1ec1ec7a7d0608be2ab *R/GUI.R
 0a4c448b298ff1721be95317d108fe57 *R/RcppExports.R
@@ -78,6 +78,6 @@ f37f5dba405d83db27047b45283aad8f *man/sinc.Rd
 f8210463403d931e8dcc975724f8f3b5 *man/viewR.Rd
 f31bc1b1b2a32fca83d516029d927d55 *man/zeroNa.Rd
 88eb575040d93e591d610c6dcebe542a *src/FIACH_src.cpp
-b385d99767c6147252d890c8fc66acbe *src/Makevars
+489b262d4f81136a32f0bb09936fe53e *src/Makevars
 a73031cbe7d6aaf0bd22e20f6526977d *src/Makevars.win
 948e07cef92b9ba2c1f68bc31a66f464 *src/RcppExports.cpp
