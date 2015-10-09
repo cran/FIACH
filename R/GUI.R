@@ -226,8 +226,8 @@ GUI<-function(){
               processChunk<-paste(
                 "for(i in 1:length(rp)){",
                 "print(paste('Beginning subject',i))",
-                "if(rp[[i]]=='NA'){fiach(input=input[[i]],tr=tr,t=t,freq=freq,maxgap=maxgap)}else{",
-                "fiach(input=input[[i]],tr=tr,t=t,rp=rp[[i]],freq=freq,maxgap=maxgap)}",
+                "if(rp[[i]]=='NA'){fiach(input=input[[i]],tr=tr,t=t,freq=freq,maxgap=maxgap,nMads=nMads)}else{",
+                "fiach(input=input[[i]],tr=tr,t=t,rp=rp[[i]],freq=freq,maxgap=maxgap,nMads=nMads)}",
                 "print(paste('Completed subject',i))",
                 "}",sep="\n")
               
@@ -252,8 +252,9 @@ GUI<-function(){
               
               
               combine<-paste(dateChunk,B0Chunk,TEChunk,TRChunk,TChunk,madsChunk,freqChunk,gapChunk,funcChunk,rpChunk,processChunk,sep="\n")
-              direc<-as.character(tkchooseDirectory())
+              direc<-tkchooseDirectory()
               if(length(direc)>0){
+              direc<-paste(as.character(direc),collapse=" ")
                 output<-paste(direc,"/",gsub("(:|-| )","_",Sys.time()),"_","fiachBatch.r",sep="")
                 writeLines(combine,output)
               }else{
@@ -322,8 +323,8 @@ GUI<-function(){
               processChunk<-paste(
                 "for(i in 1:length(rp)){",
                 "print(paste('Beginning subject',i))",
-                "if(rp[[i]]=='NA'){fiach(input=input[[i]],tr=tr,t=t,freq=freq,maxgap=maxgap)}else{",
-                "fiach(input=input[[i]],tr=tr,t=t,rp=rp[[i]],freq=freq,maxgap=maxgap)}",
+                "if(rp[[i]]=='NA'){fiach(input=input[[i]],tr=tr,t=t,freq=freq,maxgap=maxgap,nMads=nMads)}else{",
+                "fiach(input=input[[i]],tr=tr,t=t,rp=rp[[i]],freq=freq,maxgap=maxgap,nMads=nMads)}",
                 "print(paste('Completed subject',i))",
                 "}",sep="\n")
               
